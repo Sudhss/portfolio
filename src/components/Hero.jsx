@@ -5,7 +5,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import LeetCodeImg from '/LeetCode.png';
 import CodeForcesImg from '/CodeForces.png';
-import ResumeImg from '/Resume.png';
+import CodeChef from '/CodeChef.png';
 
 
 const Hero = ({ setActiveSection }) => {
@@ -71,7 +71,7 @@ const Hero = ({ setActiveSection }) => {
     const fetchLeetcodeContestRating = async () => {
       try {
         setIsLoadingLeetcode(true);
-        
+
         const graphqlQuery = {
           query: `
             query userContestRankingInfo($username: String!) {
@@ -390,13 +390,27 @@ const Hero = ({ setActiveSection }) => {
           </a>
 
           <a
-            href="https://github.com/sudhanshu-shukl" target="_blank"
+            href="https://github.com/Sudhss" target="_blank"
             className="group flex items-center gap-2 bg-slate-800/40 backdrop-blur-sm border border-gray-500/30 rounded-full px-4 py-2 hover:border-gray-400 hover:bg-slate-800/60 transition-all duration-300 hover:scale-105"
           >
             <Github className="w-9 h-9 text-gray-400" />
             <span className="text-White-400 font-semibold">GitHub</span>
             <span className="text-white font-bold">20+</span>
           </a>
+          <a
+            href="https://www.codechef.com/users/sudhsss"
+            target="_blank"
+            className="group flex items-center gap-2 bg-slate-800/40 backdrop-blur-sm border border-gray-500/30 rounded-full px-4 py-2 hover:border-gray-400 hover:bg-slate-800/60 transition-all duration-300 hover:scale-105"
+          >
+            <img
+              src="https://cdn.codechef.com/images/cc-logo.svg"
+              alt="CodeChef"
+              className="w-9 h-9 opacity-80 group-hover:opacity-100 transition"
+            />
+            <span className="text-white/70 font-semibold">⭐⭐</span>
+            <span className="text-white font-bold">1470 </span>
+          </a>
+
           <a
             href="https://drive.google.com/file/d/1R8GabtOQ7JDsV2kWA2kYOt8z_p1vm7iQ/view?usp=sharing" target="_blank"
             className="group flex items-center gap-2 bg-slate-800/40 backdrop-blur-sm border border-gray-500/30 rounded-full px-4 py-2 hover:border-gray-400 hover:bg-slate-800/60 transition-all duration-300 hover:scale-105"
