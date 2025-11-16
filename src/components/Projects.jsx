@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Clock, BookOpen, Bot, MessageCircle, Code, Database, MessageSquare, Trophy } from 'lucide-react';
+import { Clock, BookOpen, Bot, MessageCircle, Code, Database, MessageSquare, Trophy,Train } from 'lucide-react';
 import Tilt from 'react-parallax-tilt';
 
 const Projects = () => {
@@ -80,7 +80,20 @@ const Projects = () => {
       liveDemo: "#",
       github: "https://github.com/sudhanshu-shukl/chat-app",
       completed: false
+    },
+    {
+      icon: <Train className="w-12 h-12 text-cyan-400" />,
+      title: "AI Powered Train Traffic Control System",
+      description:
+        "AI-driven system that optimizes train movement using Dijkstra’s algorithm and reinforcement learning. Processes real-time station data, detects congestion, predicts delays, and recommends optimal routes.",
+      techStack: ["Python", "FastAPI", "React.js", "Reinforcement Learning", "Dijkstra"],
+      color: "from-amber-500 to-yellow-600",
+      liveDemo: "#",
+      github: "https://github.com/Sudhss/SIH_Project",
+      completed: false
     }
+
+
   ];
 
   return (
@@ -159,7 +172,7 @@ const Projects = () => {
                   <p className="text-sm md:text-base text-gray-300 mb-4 md:mb-6">{project.description}</p>
 
                   <div className="flex flex-col md:flex-row gap-3 mt-auto">
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 min-h-[60px]">
                       {project.techStack.map((tech, idx) => (
                         <span
                           key={idx}
@@ -170,7 +183,7 @@ const Projects = () => {
                       ))}
                     </div>
                     {/* Glassmorphism buttons for Live Demo and GitHub */}
-                    <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
+                    <div className="flex flex-col sm:flex-row gap-2 md:gap-3 min-h-[48px]">
                       {project.completed ? (
                         <a
                           href={project.liveDemo}
@@ -261,3 +274,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
