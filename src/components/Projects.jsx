@@ -37,8 +37,8 @@ const Projects = () => {
       description: "Built a privacy‑first, offline chat application using Flask and ReactJS. Supports multiple personas for custom user experience and runs fully locally for reliability and speed.",
       techStack: ["Flask", "ReactJS", "Python"],
       color: "from-purple-500 to-indigo-600",
-      liveDemo: "https://sudhanshu-shukl.github.io/MoodMate",
-      github: "https://github.com/sudhanshu-shukl/moodmate",
+      liveDemo: "https://Sudhss.github.io/MoodMate",
+      github: "https://github.com/Sudhss/moodmate",
       completed: true
     },
     {
@@ -47,8 +47,8 @@ const Projects = () => {
       description: "A simple Expense Tracker built with React, TailwindCSS, Vite, and MongoDB that Tracks expenses, set budgets, visualize data with charts, and export/import CSV files.",
       techStack: ["ReactJS", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
       color: "from-cyan-500 to-blue-600",
-      liveDemo: "https://sudhanshu-shukl.github.io/Expense-Manager",
-      github: "https://github.com/sudhanshu-shukl/Expense-Manager",
+      liveDemo: "https://Sudhss.github.io/Expense-Manager",
+      github: "https://github.com/Sudhss/Expense-Manager",
       completed: true
     },
     {
@@ -57,8 +57,8 @@ const Projects = () => {
       description: "A full-stack web application for tracking and managing coding contest participation across multiple platforms. Features smart color-coded urgency indicators, performance analytics, and data persistence.",
       techStack: ["React", "Node.js", "MongoDB", "Express.js"],
       color: "from-emerald-500 to-teal-600",
-      liveDemo: "https://sudhanshu-shukl.github.io/contest-manager",
-      github: "https://github.com/sudhanshu-shukl/contest-manager",
+      liveDemo: "https://Sudhss.github.io/contest-manager",
+      github: "https://github.com/Sudhss/contest-manager",
       completed: true
     },
     {
@@ -68,7 +68,7 @@ const Projects = () => {
       techStack: ["AWS Lambda", "Google Cloud", "Presto", "Terraform"],
       color: "from-teal-500 to-green-600",
       liveDemo: "#",
-      github: "https://github.com/sudhanshu-shukl/data-warehouse",
+      github: "https://github.com/Sudhss/data-warehouse",
       completed: false
     },
     {
@@ -78,7 +78,7 @@ const Projects = () => {
       techStack: ["React.js", "Node.js", "WebSockets", "Redis"],
       color: "from-orange-500 to-red-600",
       liveDemo: "#",
-      github: "https://github.com/sudhanshu-shukl/chat-app",
+      github: "https://github.com/Sudhss/chat-app",
       completed: false
     },
     {
