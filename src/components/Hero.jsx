@@ -407,8 +407,8 @@ const Hero = ({ setActiveSection }) => {
               alt="CodeChef"
               className="w-9 h-9 opacity-80 group-hover:opacity-100 transition"
             />
-            <span className="text-white/70 font-semibold">⭐⭐</span>
-            <span className="text-white font-bold">1470 </span>
+            <span className="text-white/70 font-semibold">⭐⭐⭐</span>
+            <span className="text-white font-bold">1600 </span>
           </a>
 
           <a

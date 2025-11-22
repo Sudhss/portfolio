@@ -46,8 +46,8 @@ const About = ({ theme }) => {
     },
     {
       icon: <Code className="w-8 h-8 text-cyan-400" />,
-      title: "Problem Solver",
-      description: "Turning product requirements into maintainable, scalable systems."
+      title: "Competative Programmer",
+      description: "Turning Problems to dust with 2+ years of experience in CP"
     }
   ];
 
