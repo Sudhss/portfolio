@@ -386,7 +386,7 @@ const Hero = ({ setActiveSection }) => {
           >
             <img src={CodeForcesImg} alt="CodeForces" className="w-9 h-9 object-contain" />
             <span className="text-red-400 font-semibold">Specialist</span>
-            <span className="text-white font-bold">1400+</span>
+            <span className="text-white font-bold">1500+</span>
           </a>
 
           <a
