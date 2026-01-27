@@ -49,7 +49,6 @@ Sudhanshu Shukla is a focused and driven AI & ML undergraduate based in Greater 
 - Chess Rating: 1800 (demonstrates strategic thinking)
 - 3x Hackathon Winner (rapid prototyping and innovation)
 - HackIndia 2025 Finalist
-- Campus Ambassador for multiple tech/ed-tech platforms
 - Open Source Contributor (active on GitHub)
 - LeetCode Contest Rating: 1697 (Top 13% globally)
 
