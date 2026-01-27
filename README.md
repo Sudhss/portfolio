@@ -1,4 +1,4 @@
-## Sudhanshu Shukla Portfolio
+## Sudhanshu Shukla's Portfolio
 
 ## Overview
 This is the personal portfolio of Sudhanshu Shukla, an undergraduate specializing in Artificial Intelligence and Machine Learning. The portfolio showcases technical skills, academic background, professional experience, notable achievements, and a selection of impactful projects. The site is built with React, Tailwind CSS, and modern frontend tooling, and is designed to highlight both technical depth and a commitment to real-world problem solving.
