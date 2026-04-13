@@ -43,7 +43,7 @@ const Footer = () => {
           className="flex justify-center space-x-6 mb-10"
         >
           <a 
-            href="https://github.com/Sudhanshu-shukl" 
+            href="https://github.com/Sudhss" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition-colors duration-300"
@@ -53,7 +53,7 @@ const Footer = () => {
           </a>
           
           <a 
-            href="https://linkedin.com/in/sudhs-shukla/" 
+            href="https://linkedin.com/in/Sudhss/" 
             className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition-colors duration-300"
             aria-label="LinkedIn"
           >

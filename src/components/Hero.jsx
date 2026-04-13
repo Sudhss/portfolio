@@ -374,8 +374,8 @@ const Hero = ({ setActiveSection }) => {
               </>
             ) : (
               <>
-                <span className="text-orange-400 font-semibold">Knight</span>
-                <span className="text-white font-bold">2000+</span>
+                <span className="text-blue-400 font-semibold">Guardian</span>
+                <span className="text-blue-400 font-bold">2100+</span>
               </>
             )}
           </a>
@@ -385,8 +385,8 @@ const Hero = ({ setActiveSection }) => {
             className="group flex items-center gap-2 bg-slate-800/40 backdrop-blur-sm border border-red-500/30 rounded-full px-4 py-2 hover:border-red-400 hover:bg-slate-800/60 transition-all duration-300 hover:scale-105"
           >
             <img src={CodeForcesImg} alt="CodeForces" className="w-9 h-9 object-contain" />
-            <span className="text-red-400 font-semibold">Specialist</span>
-            <span className="text-white font-bold">1500+</span>
+            <span className="text-purple-400 font-semibold">Candidate Master</span>
+            <span className="text-purple-400 font-bold">2000+</span>
           </a>
 
           <a
@@ -395,7 +395,7 @@ const Hero = ({ setActiveSection }) => {
           >
             <Github className="w-9 h-9 text-gray-400" />
             <span className="text-White-400 font-semibold">GitHub</span>
-            <span className="text-white font-bold">20+</span>
+            <span className="text-white font-bold">30+</span>
           </a>
           <a
             href="https://www.codechef.com/users/sudhsss"
@@ -407,8 +407,8 @@ const Hero = ({ setActiveSection }) => {
               alt="CodeChef"
               className="w-9 h-9 opacity-80 group-hover:opacity-100 transition"
             />
-            <span className="text-white/70 font-semibold">⭐⭐⭐</span>
-            <span className="text-white font-bold">1600 </span>
+            <span className="text-white/70 font-semibold">⭐⭐⭐⭐⭐⭐</span>
+            <span className="text-white font-bold">2200+ </span>
           </a>
 
           <a

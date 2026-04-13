@@ -157,18 +157,18 @@ const Contact = () => {
                 <div className="p-3 bg-slate-800 rounded-lg">
                   <Github className="w-6 h-6" />
                 </div>
-                <span>Sudhanshu-shukl</span>
+                <span>Sudhss</span>
               </a>
               
               <a 
-                href="https://linkedin.com/in/sudhs-shukla/" 
+                href="https://linkedin.com/in/Sudhss/" 
                 target='_blank'
                 className="flex items-center gap-4 text-gray-300 hover:text-cyan-400 transition-colors duration-300"
               >
                 <div className="p-3 bg-slate-800 rounded-lg">
                   <Linkedin className="w-6 h-6" />
                 </div>
-                <span>sudhs-shukla</span>
+                <span>Sudhss</span>
               </a>
               
               <a 

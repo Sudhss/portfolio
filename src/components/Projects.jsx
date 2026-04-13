@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Clock, BookOpen, Bot, MessageCircle, Code, Database, MessageSquare, Trophy,Train } from 'lucide-react';
+import { 
+  Clock, BookOpen, Bot, MessageCircle, Code, Database, 
+  MessageSquare, Trophy, Train, Terminal, Cpu 
+} from 'lucide-react';
 import Tilt from 'react-parallax-tilt';
 
 const Projects = () => {
@@ -32,68 +35,45 @@ const Projects = () => {
 
   const projects = [
     {
-      icon: <MessageCircle className="w-12 h-12 text-cyan-400" />,
-      title: "MoodMate (Offline Chat App)",
-      description: "Built a privacy‑first, offline chat application using Flask and ReactJS. Supports multiple personas for custom user experience and runs fully locally for reliability and speed.",
-      techStack: ["Flask", "ReactJS", "Python"],
-      color: "from-purple-500 to-indigo-600",
-      liveDemo: "https://Sudhss.github.io/MoodMate",
-      github: "https://github.com/Sudhss/moodmate",
+      icon: <Terminal className="w-12 h-12 text-cyan-400" />,
+      title: "Valence (High-Performance Code Editor)",
+      description: "Built a minimal, high-performance code editor from scratch in C++ and Qt with zero dependencies. Implements a custom text buffer (vector<string>), O(n) tokenizer for syntax highlighting, and a viewport-based rendering engine achieving 60 FPS regardless of file size. Designed with clean subsystem architecture separating buffer, cursor, renderer, input, and lexer.",
+      techStack: ["C++", "Qt", "QPainter", "Systems Programming"],
+      color: "from-gray-700 to-gray-900",
+      liveDemo: "https://valence-website.vercel.app/",
+      github: "https://github.com/Sudhss/Valence",
       completed: true
-    },
-    {
-      icon: <Code className="w-12 h-12 text-cyan-400" />,
-      title: "Full Stack Expense Manager",
-      description: "A simple Expense Tracker built with React, TailwindCSS, Vite, and MongoDB that Tracks expenses, set budgets, visualize data with charts, and export/import CSV files.",
-      techStack: ["ReactJS", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
-      color: "from-cyan-500 to-blue-600",
-      liveDemo: "https://Sudhss.github.io/Expense-Manager",
-      github: "https://github.com/Sudhss/Expense-Manager",
-      completed: true
-    },
-    {
-      icon: <Trophy className="w-12 h-12 text-cyan-400" />,
-      title: "Contest Manager",
-      description: "A full-stack web application for tracking and managing coding contest participation across multiple platforms. Features smart color-coded urgency indicators, performance analytics, and data persistence.",
-      techStack: ["React", "Node.js", "MongoDB", "Express.js"],
-      color: "from-emerald-500 to-teal-600",
-      liveDemo: "https://Sudhss.github.io/contest-manager",
-      github: "https://github.com/Sudhss/contest-manager",
-      completed: true
-    },
-    {
-      icon: <Database className="w-12 h-12 text-cyan-400" />,
-      title: "Serverless Data Warehouse with Real-Time ETL",
-      description: "Built a serverless, distributed data warehouse using AWS Lambda and Google Cloud Functions for real‑time ETL. Integrated Presto for high‑speed querying and IAM for secure access. Automated data pipelines with Terraform.",
-      techStack: ["AWS Lambda", "Google Cloud", "Presto", "Terraform"],
-      color: "from-teal-500 to-green-600",
-      liveDemo: "#",
-      github: "https://github.com/Sudhss/data-warehouse",
-      completed: false
-    },
-    {
-      icon: <MessageSquare className="w-12 h-12 text-cyan-400" />,
-      title: "Real-Time Chat Application with WebSockets",
-      description: "Built a real-time chat app using WebSockets for seamless communication. Developed with React.js, Node.js and Redis for message storage and session management. Implemented user authentication and message encryption for secure chats.",
-      techStack: ["React.js", "Node.js", "WebSockets", "Redis"],
-      color: "from-orange-500 to-red-600",
-      liveDemo: "#",
-      github: "https://github.com/Sudhss/chat-app",
-      completed: false
     },
     {
       icon: <Train className="w-12 h-12 text-cyan-400" />,
-      title: "AI Powered Train Traffic Control System",
-      description:
-        "AI-driven system that optimizes train movement using Dijkstra’s algorithm and reinforcement learning. Processes real-time station data, detects congestion, predicts delays, and recommends optimal routes.",
-      techStack: ["Python", "FastAPI", "React.js", "Reinforcement Learning", "Dijkstra"],
+      title: "RailFlow (AI Railway Traffic Optimization System)",
+      description: "Engineered an AI-driven train scheduling system combining Dijkstra’s shortest-path algorithm with a reinforcement learning agent to optimize routing under real-time congestion. Achieves dynamic rerouting, automated dispatch, and proactive delay minimization using simulation-trained policies.",
+      techStack: ["Python", "React.js", "WebSockets", "Reinforcement Learning", "Dijkstra", "OpenAI Gym"],
       color: "from-amber-500 to-yellow-600",
-      liveDemo: "#",
-      github: "https://github.com/Sudhss/SIH_Project",
+      liveDemo: "https://rail-flow-website.vercel.app/",
+      github: "https://github.com/Sudhss/RailFlow",
       completed: false
+    },
+    {
+      icon: <Cpu className="w-12 h-12 text-cyan-400" />,
+      title: "Axiom-Sovereign (Autonomous SRE Remediation Engine)",
+      description: "Built a distributed autonomous remediation system using a multi-agent debate protocol to resolve infrastructure failures with full explainability. Features sub-10ms event detection via C++ sentinel, AI-driven root cause analysis, and automated Jira-based governance for auditable decision-making.",
+      techStack: ["C++", "Python", "FastAPI", "Streamlit", "LLM", "Jira API"],
+      color: "from-rose-500 to-pink-600",
+      liveDemo: "#",
+      github: "https://github.com/Sudhss/Axios-Sovereign",
+      completed: false
+    },
+    {
+      icon: <MessageCircle className="w-12 h-12 text-cyan-400" />,
+      title: "MoodMate (Offline Emotion-Aware AI Companion)",
+      description: "Developed a local-first AI companion powered by LLaMA 3 via Ollama, featuring dynamic personality modes (sarcastic, honest, supportive, neutral). Implements prompt-engineered behavioral switching, persistent context via SQLite, and zero-cloud architecture ensuring complete privacy and low-latency interaction.",
+      techStack: ["React.js", "Flask", "Python", "Ollama", "LLaMA 3", "SQLite"],
+      color: "from-purple-500 to-indigo-600",
+      liveDemo: "#",
+      github: "https://github.com/Sudhss/moodmate",
+      completed: true
     }
-
-
   ];
 
   return (

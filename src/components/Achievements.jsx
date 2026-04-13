@@ -8,7 +8,7 @@ const Achievements = () => {
     threshold: 0.3,
     triggerOnce: false
   });
-  
+
   const [sectionRef, sectionInView] = useInView({
     threshold: 0.5,
   });
@@ -28,6 +28,11 @@ const Achievements = () => {
   }, [sectionInView]);
 
   const achievements = [
+    {
+      icon: <Star className="w-12 h-12 text-yellow-500" />,
+      title: "Google BigCode 2026 - Semi-Finalist",
+      description: "Reached the semi-finals of Google BigCode 2026, competing among top developers. Demonstrated strong problem-solving, algorithmic thinking, and competitive programming skills under pressure."
+    },
     {
       icon: <Trophy className="w-12 h-12 text-yellow-500" />,
       title: "Chess Rating: 1835+",
@@ -50,13 +55,13 @@ const Achievements = () => {
     },
     {
       icon: <TrendingUp className="w-12 h-12 text-orange-500" />,
-      title: "LeetCode Contest Rating: 1858 - Knight",
-      description: "Global Rank: Top 5% (41,399 / 769,342) - Demonstrating strong problem-solving skills and algorithmic thinking."
+      title: "LeetCode Contest Rating: 2100+ - Guardian",
+      description: "Global Rank: Top 2% (15k / 769,342) - Demonstrating strong problem-solving skills and algorithmic thinking."
     },
     {
       icon: <TrendingUp className="w-12 h-12 text-red-400" />,
-      title: "CodeForces Rating: 1600+ - Expert",
-      description: "Top 5000 globally"
+      title: "CodeForces Rating: 2100+ - Candidate Master",
+      description: "Top 2000 globally"
     }
   ];
 
@@ -71,8 +76,8 @@ const Achievements = () => {
           animate={hasAnimated ? "visible" : "hidden"}
           variants={{
             hidden: { opacity: 0, y: 30 },
-            visible: { 
-              opacity: 1, 
+            visible: {
+              opacity: 1,
               y: 0,
               transition: {
                 duration: 0.8,
@@ -83,16 +88,16 @@ const Achievements = () => {
           ref={ref}
           className="text-center mb-16"
         >
-          <h2 
-            data-text="ACHIEVEMENTS" 
+          <h2
+            data-text="ACHIEVEMENTS"
             className="glitch-text text-4xl md:text-5xl font-bold mb-8"
-            style={{background: 'linear-gradient(to top, #9CA3AF, #D1D5DB, #FFFFFF)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}
+            style={{ background: 'linear-gradient(to top, #9CA3AF, #D1D5DB, #FFFFFF)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}
           >
             ACHIEVEMENTS
           </h2>
           <div className="h-0.5 w-24 md:w-32 bg-gradient-to-r from-cyan-500 to-fuchsia-500 mx-auto mb-8"></div>
         </motion.div>
-        
+
         <div className="max-w-4xl mx-auto">
           {achievements.map((achievement, index) => (
             <motion.div
@@ -107,19 +112,19 @@ const Achievements = () => {
                 <div className="p-4 bg-slate-800/50 backdrop-blur-sm border border-white/10 rounded-xl">
                   {achievement.icon}
                 </div>
-                
+
                 <div>
                   <h3 className="text-2xl font-bold mb-2">{achievement.title}</h3>
                   <p className="text-gray-300">{achievement.description}</p>
                 </div>
               </div>
-              
+
               {/* Decorative elements */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-500/10 rounded-full blur-3xl -z-10"></div>
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-amber-500/10 rounded-full blur-3xl -z-10"></div>
             </motion.div>
           ))}
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={hasAnimated ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
@@ -129,11 +134,11 @@ const Achievements = () => {
             <Award className="w-16 h-16 text-indigo-400 mx-auto mb-6" />
             <h3 className="text-2xl font-bold mb-4">Continuous Learning & Growth</h3>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              While I continue to build my formal achievement portfolio, I'm constantly participating in coding challenges, 
-              debates, and continuously enhancing my skills through practical projects and applications. My journey is focused 
+              While I continue to build my formal achievement portfolio, I'm constantly participating in coding challenges,
+              debates, and continuously enhancing my skills through practical projects and applications. My journey is focused
               on making a meaningful impact in the field of software engineering.
             </p>
-            
+
             <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-4">
               <div className="flex items-center">
                 <Target className="w-5 h-5 text-cyan-400 mr-2" />
