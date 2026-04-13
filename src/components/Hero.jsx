@@ -412,7 +412,7 @@ const Hero = ({ setActiveSection }) => {
           </a>
 
           <a
-            href="https://drive.google.com/file/d/1R8GabtOQ7JDsV2kWA2kYOt8z_p1vm7iQ/view?usp=sharing" target="_blank"
+            href="https://drive.google.com/file/d/19OgKEmx__Z351-1UspfIRIfuUhDAI_zU/view?usp=sharing" target="_blank"
             className="group flex items-center gap-2 bg-slate-800/40 backdrop-blur-sm border border-gray-500/30 rounded-full px-4 py-2 hover:border-gray-400 hover:bg-slate-800/60 transition-all duration-300 hover:scale-105"
           >
             <FileText className="w-9 h-9 text-gray-400" />
