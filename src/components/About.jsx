@@ -42,7 +42,7 @@ const About = ({ theme }) => {
     {
       icon: <Chess className="w-8 h-8 text-cyan-400" />,
       title: "Chess Player",
-      description: "Strategist (1800+) — disciplined thinking, under pressure."
+      description: "Strategist (1400+) — disciplined thinking, under pressure."
     },
     {
       icon: <Code className="w-8 h-8 text-cyan-400" />,
@@ -105,7 +105,7 @@ const About = ({ theme }) => {
             <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gradient">Sudhanshu Shukla</h3>
             <div className="space-y-4 text-gray-300">
               <p>
-                <span className="text-white font-semibold">Age:</span> 20 (Born April 23, 2005)
+                <span className="text-white font-semibold">Age:</span> 21 (Born April 23, 2005)
               </p>
               <p>
                 <span className="text-white font-semibold">Location:</span> Greater Noida, India
