@@ -54,6 +54,7 @@ const Footer = () => {
           
           <a 
             href="https://linkedin.com/in/Sudhss/" 
+            target = "_blank"
             className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition-colors duration-300"
             aria-label="LinkedIn"
           >
