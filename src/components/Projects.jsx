@@ -52,7 +52,7 @@ const Projects = () => {
       color: "from-amber-500 to-yellow-600",
       liveDemo: "https://rail-flow-website.vercel.app/",
       github: "https://github.com/Sudhss/RailFlow",
-      completed: false
+      completed: true
     },
     {
       icon: <Cpu className="w-12 h-12 text-cyan-400" />,
