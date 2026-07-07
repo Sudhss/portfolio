@@ -70,7 +70,7 @@ const Projects = () => {
       description: "Developed a local-first AI companion powered by LLaMA 3 via Ollama, featuring dynamic personality modes (sarcastic, honest, supportive, neutral). Implements prompt-engineered behavioral switching, persistent context via SQLite, and zero-cloud architecture ensuring complete privacy and low-latency interaction.",
       techStack: ["React.js", "Flask", "Python", "Ollama", "LLaMA 3", "SQLite"],
       color: "from-purple-500 to-indigo-600",
-      liveDemo: "#",
+      liveDemo: "https://mood-mate-pi.vercel.app/",
       github: "https://github.com/Sudhss/moodmate",
       completed: true
     }
