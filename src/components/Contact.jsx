@@ -139,13 +139,13 @@ const Contact = () => {
             
             <div className="space-y-6">
               <a 
-                href="mailto:shuklasudhanshu2304005@gmail.com" 
+                href="mailto:sudhss.work@gmail.com" 
                 className="flex items-center gap-4 text-gray-300 hover:text-cyan-400 transition-colors duration-300"
               >
                 <div className="p-3 bg-slate-800 rounded-lg">
                   <Mail className="w-6 h-6" />
                 </div>
-                <span>shuklasudhanshu2304005@gmail.com</span>
+                <span>sudhss.work@gmail.com</span>
               </a>
               
               <a 
