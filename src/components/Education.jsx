@@ -33,7 +33,7 @@ const Education = () => {
       degree: "B.Tech in Artificial Intelligence & Machine Learning",
       institution: "NIET, Greater Noida",
       duration: "2023 - 2027 (Expected)",
-      description: "Currently in 3rd year, exploring the depths of AI and ML technologies while participating in various tech events and hackathons.\n",
+      description: "Currently in final year, exploring the depths of AI and ML technologies while participating in various tech events and hackathons.\n",
       subjects: ["Python, C, C++, Java", "SQL, MongoDB, Firebase", "Data Structures and Algorithms"]
     },
     {
