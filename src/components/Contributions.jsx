@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Youtube, Paperclip } from 'lucide-react';
+import { Code, Youtube, Paperclip, Route } from 'lucide-react';
 
 const contributions = [
     {
@@ -29,6 +29,13 @@ const contributions = [
         features: [
             'ATS Score 90%', 'Developer Focused', 'Easy to Customize', 'Professional Layout', 'Multiple Formats'
         ]
+    },
+    {
+        title: 'FAANG-Ready Roadmap',
+        description: 'A structured roadmap to go from 2nd-year fundamentals to FAANG-ready software engineering. Covers programming foundations, DSA, competitive programming, CS fundamentals, resume building, internships, system design, and high-impact projects.',
+        link: 'https://drive.google.com/file/d/1tIRzrBOchXwopHkSzDiRiJSNIjlLNjEG/view?usp=sharing',
+        icon: Route,
+        features: ['Step-by-Step Path','DSA & CP', 'CS Fundamentals','Projects & Resume','System Design']
     }
 ];
 
@@ -36,12 +43,12 @@ const Contributions = () => {
     return (
         <section id="contributions" className="py-20 px-4 max-w-sm md:max-w-4xl mx-auto">
             <div className="text-center mb-16">
-                <h2 
-                  data-text="CONTRIBUTIONS" 
-                  className="glitch-text text-4xl md:text-5xl font-bold mb-8"
-                  style={{background: 'linear-gradient(to top, #9CA3AF, #D1D5DB, #FFFFFF)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}
+                <h2
+                    data-text="CONTRIBUTIONS"
+                    className="glitch-text text-4xl md:text-5xl font-bold mb-8"
+                    style={{ background: 'linear-gradient(to top, #9CA3AF, #D1D5DB, #FFFFFF)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}
                 >
-                  CONTRIBUTIONS
+                    CONTRIBUTIONS
                 </h2>
                 <div className="h-0.5 w-24 md:w-32 bg-gradient-to-r from-cyan-500 to-fuchsia-500 mx-auto mb-8"></div>
             </div>
@@ -57,7 +64,7 @@ const Contributions = () => {
                     >
                         {/* Gradient Background */}
                         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
+
                         {/* Header with Icon */}
                         <div className="relative p-6 pb-4">
                             <div className="flex items-center gap-4 mb-4">
@@ -70,18 +77,18 @@ const Contributions = () => {
                                     </h3>
                                 </div>
                             </div>
-                            
+
                             <p className="text-sm text-gray-300 leading-relaxed mb-4 line-clamp-3">
                                 {item.description}
                             </p>
                         </div>
-                        
+
                         {/* Tags Section */}
                         <div className="relative px-6 pb-6">
                             {item.companies && (
                                 <div className="mb-4">
                                     <h4 className="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Companies</h4>
-                                    <div className="flex flex-wrap gap-2">
+                                    <div className="flex flex-nowrap gap-2">
                                         {item.companies.slice(0, 4).map((company, companyIdx) => (
                                             <span key={companyIdx} className="px-3 py-1 bg-slate-700/60 text-xs rounded-full text-gray-300 border border-slate-600/30 hover:border-cyan-400/30 transition-colors">
                                                 {company}
@@ -95,7 +102,7 @@ const Contributions = () => {
                                     </div>
                                 </div>
                             )}
-                            
+
                             {item.topics && (
                                 <div className="mb-4">
                                     <h4 className="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Topics</h4>
@@ -113,7 +120,7 @@ const Contributions = () => {
                                     </div>
                                 </div>
                             )}
-                            
+
                             {item.features && (
                                 <div className="mb-4">
                                     <h4 className="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Features</h4>
@@ -131,7 +138,7 @@ const Contributions = () => {
                                     </div>
                                 </div>
                             )}
-                            
+
                             {/* View Link */}
                             <div className="flex items-center justify-between pt-4 border-t border-white/10">
                                 <span className="text-xs text-gray-400">Click to view</span>
@@ -142,7 +149,7 @@ const Contributions = () => {
                                 </div>
                             </div>
                         </div>
-                        
+
                         {/* Decorative Elements */}
                         <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-cyan-500/10 to-transparent rounded-full blur-xl"></div>
                         <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-purple-500/10 to-transparent rounded-full blur-xl"></div>
