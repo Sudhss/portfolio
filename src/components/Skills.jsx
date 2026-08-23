@@ -33,12 +33,11 @@ const Skills = () => {
       icon: <Code className="w-8 h-8 text-cyan-400" />,
       title: "Programming Languages",
       skills: [
-        { name: "C", proficiency: 70 },
         { name: "C++", proficiency: 75 },
-        { name: "Java", proficiency: 80 },
         { name: "Python", proficiency: 85 },
-        { name: "PHP", proficiency: 60 },
+        { name: "C", proficiency: 70 },
         { name: "JavaScript (ES6+)", proficiency: 90 },
+        { name: "Java", proficiency: 80 },
       ],
     },
     {
@@ -47,8 +46,8 @@ const Skills = () => {
       skills: [
         { name: "HTML, CSS, JavaScript", proficiency: 95 },
         { name: "ReactJS", proficiency: 85 },
-        { name: "NextJS", proficiency: 80 },
         { name: "ExpressJS", proficiency: 85 },
+        { name: "NextJS", proficiency: 80 },
         { name: "Node", proficiency: 80 },
         { name: "REST APIs", proficiency: 85 },
       ],
@@ -57,12 +56,9 @@ const Skills = () => {
       icon: <Database className="w-8 h-8 text-cyan-400" />,
       title: "Database Management",
       skills: [
-        { name: "SQL", proficiency: 80 },
         { name: "MySQL", proficiency: 80 },
         { name: "MongoDB", proficiency: 80 },
         { name: "Redis", proficiency: 70 },
-        { name: "Database Design", proficiency: 75 },
-        { name: "Query Optimization", proficiency: 70 },
       ],
     },
     {
@@ -82,6 +78,7 @@ const Skills = () => {
         { name: "CI/CD (GitHub Actions)", proficiency: 70 },
         { name: "Git", proficiency: 85 },
         { name: "GitHub", proficiency: 85 },
+        { name: "GitLab", proficiency: 85 }
       ],
     },
   ];

@@ -52,7 +52,7 @@ const Projects = () => {
       color: "from-amber-500 to-yellow-600",
       liveDemo: "https://rail-flow-website.vercel.app/",
       github: "https://github.com/Sudhss/RailFlow",
-      completed: false
+      completed: true
     },
     {
       icon: <Cpu className="w-12 h-12 text-cyan-400" />,
@@ -70,7 +70,7 @@ const Projects = () => {
       description: "Developed a local-first AI companion powered by LLaMA 3 via Ollama, featuring dynamic personality modes (sarcastic, honest, supportive, neutral). Implements prompt-engineered behavioral switching, persistent context via SQLite, and zero-cloud architecture ensuring complete privacy and low-latency interaction.",
       techStack: ["React.js", "Flask", "Python", "Ollama", "LLaMA 3", "SQLite"],
       color: "from-purple-500 to-indigo-600",
-      liveDemo: "#",
+      liveDemo: "https://mood-mate-pi.vercel.app/",
       github: "https://github.com/Sudhss/moodmate",
       completed: true
     }

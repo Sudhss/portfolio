@@ -30,12 +30,12 @@ const Achievements = () => {
   const achievements = [
     {
       icon: <Star className="w-12 h-12 text-yellow-500" />,
-      title: "Google BigCode 2026 - Semi-Finalist",
+      title: "Google BigCode 2026 - Semi-Finalist (Top 1%)",
       description: "Reached the semi-finals of Google BigCode 2026, competing among top developers. Demonstrated strong problem-solving, algorithmic thinking, and competitive programming skills under pressure."
     },
     {
       icon: <Trophy className="w-12 h-12 text-yellow-500" />,
-      title: "Chess Rating: 1835+",
+      title: "Chess Rating: 1435+",
       description: "Achieved a competitive chess rating of 1800+, demonstrating strategic thinking and planning abilities."
     },
     {
@@ -55,13 +55,13 @@ const Achievements = () => {
     },
     {
       icon: <TrendingUp className="w-12 h-12 text-orange-500" />,
-      title: "LeetCode Contest Rating: 2100+ - Guardian",
+      title: "LeetCode Contest Rating: 2100+ - Knight",
       description: "Global Rank: Top 2% (15k / 769,342) - Demonstrating strong problem-solving skills and algorithmic thinking."
     },
     {
       icon: <TrendingUp className="w-12 h-12 text-red-400" />,
-      title: "CodeForces Rating: 2100+ - Candidate Master",
-      description: "Top 2000 globally"
+      title: "CodeForces Rating: 1600+ - Expert",
+      description: "Top 5000 globally"
     }
   ];
 
