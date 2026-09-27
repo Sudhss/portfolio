@@ -35,7 +35,7 @@ const Achievements = () => {
     },
     {
       icon: <Trophy className="w-12 h-12 text-yellow-500" />,
-      title: "Chess Rating: 1435+",
+      title: "Chess Rating: 1800+",
       description: "Achieved a competitive chess rating of 1800+, demonstrating strategic thinking and planning abilities."
     },
     {
@@ -54,14 +54,19 @@ const Achievements = () => {
       description: "Regularly contribute to the tech community and maintain active personal repositories on GitHub."
     },
     {
-      icon: <TrendingUp className="w-12 h-12 text-orange-500" />,
-      title: "LeetCode Contest Rating: 2100+ - Knight",
-      description: "Global Rank: Top 2% (15k / 769,342) - Demonstrating strong problem-solving skills and algorithmic thinking."
+      icon: <TrendingUp className="w-12 h-12 text-red-500" />,
+      title: "LeetCode Contest Rating: 2200+ - Guardian",
+      description: "Global Rank: Top 1% - Demonstrating exceptional problem-solving skills and algorithmic thinking."
     },
     {
-      icon: <TrendingUp className="w-12 h-12 text-red-400" />,
+      icon: <TrendingUp className="w-12 h-12 text-blue-400" />,
       title: "CodeForces Rating: 1600+ - Expert",
-      description: "Top 5000 globally"
+      description: "Ranked among Top 5000 globally"
+    },
+    {
+      icon: <Star className="w-12 h-12 text-yellow-400" />,
+      title: "CodeChef: 5-Star Coder",
+      description: "Demonstrating high-level competitive programming execution under tight time constraints."
     }
   ];
 

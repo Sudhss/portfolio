@@ -42,12 +42,12 @@ const About = ({ theme }) => {
     {
       icon: <Chess className="w-8 h-8 text-cyan-400" />,
       title: "Chess Player",
-      description: "Strategist (1400+) — disciplined thinking, under pressure."
+      description: "Strategist (1800+) — disciplined thinking, under pressure."
     },
     {
       icon: <Code className="w-8 h-8 text-cyan-400" />,
-      title: "Competative Programmer",
-      description: "Turning Problems to dust with 2+ years of experience in CP"
+      title: "Competitive Programmer",
+      description: "Turning problems to dust with 2+ years of experience in CP"
     }
   ];
 
