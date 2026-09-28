@@ -199,6 +199,7 @@ function metres(v) {
 /* ---- start ------------------------------------------------------------ */
 
 const panelsEl = document.getElementById("panels");
+if (matchMedia("(pointer: coarse)").matches) document.body.classList.add("touch");
 
 function renderAll(layers) {
   const byName = layers ? Object.fromEntries(layers.map((L) => [L.id, L])) : {};
@@ -267,7 +268,7 @@ async function start() {
     if (!moved) {
       moved = true;
       // Scrolled instead of using the keys: keep a small reminder that the keys are smoother.
-      if (via === "keys") prompt.classList.add("gone");
+      if (via === "keys" || via === "touch") prompt.classList.add("gone");
       else prompt.classList.add("small");
     } else if (keysUsed) prompt.classList.add("gone");
     if (next === tour.length - 1) setTimeout(() => engine.stop === next && say(edges.end), 2600);
@@ -314,15 +315,37 @@ async function start() {
     lastKey = performance.now();
     step(fwd ? 1 : -1, "keys");
   });
+  // Swipes move the tour anywhere, the panel included, unless the panel
+  // still has its own text to scroll in that direction.
   let ty = null;
-  addEventListener("touchstart", (e) => (ty = e.touches.length === 1 && !e.target.closest(".panel") ? e.touches[0].clientY : null), { passive: true });
+  let tx = null;
+  let startScroll = 0;
+  let inPanel = null;
+  addEventListener(
+    "touchstart",
+    (e) => {
+      if (e.touches.length !== 1 || e.target.closest("a, button, input, textarea")) return (ty = null);
+      ty = e.touches[0].clientY;
+      tx = e.touches[0].clientX;
+      inPanel = e.target.closest(".panel");
+      startScroll = inPanel ? inPanel.scrollTop : 0;
+    },
+    { passive: true }
+  );
   addEventListener(
     "touchend",
     (e) => {
       if (ty == null) return;
       const dy = ty - e.changedTouches[0].clientY;
-      if (Math.abs(dy) > 45) step(Math.sign(dy), "touch");
+      const dx = tx - e.changedTouches[0].clientX;
       ty = null;
+      if (Math.abs(dy) < 50 || Math.abs(dx) > Math.abs(dy)) return;
+      if (inPanel) {
+        const scrolled = Math.abs(inPanel.scrollTop - startScroll) > 2;
+        const canMore = dy > 0 ? inPanel.scrollTop + inPanel.clientHeight < inPanel.scrollHeight - 2 : inPanel.scrollTop > 2;
+        if (scrolled || canMore) return;
+      }
+      step(Math.sign(dy), "touch");
     },
     { passive: true }
   );

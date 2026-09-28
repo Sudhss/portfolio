@@ -582,54 +582,227 @@ body.still #world {
   display: none;
 }
 
+#prompt .touch {
+  display: none;
+}
+body.touch #prompt .desk,
+body.touch #prompt .keys {
+  display: none;
+}
+body.touch #prompt .touch {
+  display: grid;
+}
+
+/* ---- phones and small tablets: scene on top, a solid sheet below */
 @media (max-width: 820px) {
   #scrim {
-    background: linear-gradient(0deg, rgba(5, 7, 11, 0.95) 0%, rgba(5, 7, 11, 0.8) 45%, rgba(5, 7, 11, 0) 62%);
+    background: linear-gradient(0deg, rgba(5, 7, 11, 0.9) 0%, rgba(5, 7, 11, 0.6) 40%, rgba(5, 7, 11, 0) 58%);
+  }
+  #labels {
+    display: none;
+  }
+  .bar {
+    padding: 14px 16px;
+  }
+  .mark {
+    font-size: 15px;
+  }
+  .bar-links {
+    gap: 14px;
+    font-size: 13.5px;
   }
   #panels {
-    left: 16px;
-    right: 16px;
+    left: 10px;
+    right: 10px;
     top: auto;
-    bottom: 76px;
+    bottom: 62px;
     transform: none;
     width: auto;
-    height: 50vh;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
   }
-  .panel {
+  .panel,
+  .panel.live {
+    position: relative;
     top: auto;
-    bottom: 0;
     transform: none;
+    width: 100%;
+    max-height: min(58vh, 520px);
+    padding: 16px 16px 14px;
+    background: rgba(9, 13, 19, 0.94);
+    border: 1px solid var(--line);
+    border-top: 2px solid var(--copper);
+    overscroll-behavior: contain;
+  }
+  .kicker {
+    font-size: 12px;
+    margin-bottom: 8px;
   }
   .panel h1 {
-    font-size: 40px;
+    font-size: clamp(30px, 9vw, 40px);
+    margin-bottom: 12px;
   }
   .panel h2 {
-    font-size: 32px;
+    font-size: clamp(26px, 7.5vw, 34px);
+    margin-bottom: 10px;
+  }
+  .panel h3.sub {
+    font-size: 18px;
+  }
+  .panel p,
+  .panel li,
+  .panel dd {
+    font-size: 15px;
+    line-height: 1.5;
   }
   .panel .lede {
-    font-size: 17px;
+    font-size: 16px;
+  }
+  .hero-links {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px !important;
+    margin-top: 16px !important;
+  }
+  .hero-links .btn {
+    text-align: center;
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+  .actions .btn {
+    padding: 9px 14px;
+    font-size: 14px;
+  }
+  .groups {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .groups dd {
+    margin-bottom: 8px;
   }
   .peak {
     grid-template-columns: 1fr auto;
+    gap: 4px 10px;
+    padding: 10px 0;
+  }
+  .peak span {
+    grid-column: 1 / -1;
+  }
+  .peak b {
+    font-size: 24px;
+  }
+  .email a {
+    font-size: 16px;
   }
   .note-form .row {
     grid-template-columns: 1fr;
   }
-  #prompt {
+  #prompt,
+  #prompt.small {
+    top: 62px;
     bottom: auto;
-    top: 90px;
+    padding: 9px 14px;
+    gap: 10px;
+    white-space: nowrap;
   }
   #prompt b {
-    font-size: 20px;
+    font-size: 16px;
+  }
+  #prompt .full {
+    display: none;
+  }
+  #prompt .keys kbd {
+    width: 26px;
+    height: 26px;
+    font-size: 14px;
+  }
+  .keys {
+    grid-auto-flow: column;
+  }
+  #edge {
+    top: 62px;
+    bottom: auto;
+    font-size: 15px;
+    padding: 12px 16px;
   }
   #controls {
-    bottom: 18px;
+    right: 10px;
+    bottom: 12px;
+    gap: 8px;
+  }
+  .ctl {
+    width: 40px;
+    height: 40px;
   }
   #hud {
     display: none;
   }
-  .bar-links {
-    gap: 16px;
-    font-size: 13.5px;
+}
+
+@media (max-height: 560px) and (max-width: 1200px) {
+  #hud,
+  #labels {
+    display: none;
+  }
+  #prompt,
+  #prompt.small {
+    top: auto;
+    bottom: 12px;
+    left: auto;
+    right: 200px;
+    transform: none;
+    padding: 8px 12px;
+  }
+  .keys {
+    grid-auto-flow: column;
+  }
+  .keys kbd {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+  #prompt b {
+    font-size: 15px;
+  }
+  #prompt .full {
+    display: none;
+  }
+  .panel h1 {
+    font-size: 30px;
+  }
+  .panel h2 {
+    font-size: 26px;
+  }
+  .panel .lede,
+  .panel p {
+    font-size: 14.5px;
+  }
+  .panel,
+  .panel.live {
+    background: rgba(9, 13, 19, 0.94);
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-top: 2px solid var(--copper);
+  }
+}
+@media (max-width: 820px) and (max-height: 560px), (max-height: 560px) and (max-width: 1200px) {
+  /* Phones on their side: sheet on the left instead. */
+  #panels {
+    transform: none;
+    height: auto;
+    left: 10px;
+    right: auto;
+    width: 52vw;
+    top: 56px;
+    bottom: 10px;
+    align-items: stretch;
+  }
+  .panel,
+  .panel.live {
+    max-height: 100%;
+  }
+  #controls {
+    bottom: 10px;
   }
 }

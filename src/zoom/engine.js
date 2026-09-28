@@ -78,6 +78,7 @@ export function createEngine(canvas, labelRoot, layers, stops) {
     shotDir: new THREE.Vector3(0, 0, 1),
   };
 
+  let fit = 1;
   // Keep the subject clear of the text panel by shifting the image centre.
   function resize() {
     const w = canvas.clientWidth;
@@ -85,9 +86,16 @@ export function createEngine(canvas, labelRoot, layers, stops) {
     renderer.setSize(w, h, false);
     labels.setSize(w, h);
     camera.aspect = w / h;
-    const narrow = w < 820;
-    camera.fov = narrow ? 52 : 38;
-    camera.setViewOffset(w, h, narrow ? 0 : -w * 0.17, narrow ? h * 0.2 : 0, w, h);
+    // Put the subject where the text isn't: right of the panel on desktop
+    // and on phones held sideways, above the sheet on phones held upright.
+    const sideways = h < 560 && w < 1200;
+    const narrow = w < 820 || sideways;
+    camera.fov = narrow && !sideways ? 56 : 38;
+    const ox = !narrow || sideways ? -w * (sideways ? 0.24 : 0.17) : 0;
+    const oy = narrow && !sideways ? h * 0.21 : 0;
+    camera.setViewOffset(w, h, ox, oy, w, h);
+    // Tall, narrow screens can't fit a wide subject at desktop distances.
+    fit = w / h < 1 ? Math.min(1.9, 0.8 / (w / h)) : 1;
     camera.updateProjectionMatrix();
   }
   resize();
@@ -197,6 +205,7 @@ export function createEngine(canvas, labelRoot, layers, stops) {
     }
 
     dir.applyEuler(new THREE.Euler(st.pitch, st.yaw, 0, "YXZ"));
+    dist *= fit;
     camera.position.copy(center).addScaledVector(dir, dist);
     camera.up.set(0, 1, 0);
     if (Math.abs(dir.y) > 0.985) camera.up.set(0, 0, -1);
